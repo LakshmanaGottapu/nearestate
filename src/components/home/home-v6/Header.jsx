@@ -144,6 +144,7 @@ const Header = () => {
   }
   return (
     <>
+      <h1>Lakshman's Nearestate</h1>
       <header
         className={`header-nav nav-homepage-style at-home5 main-menu  ${
           navbar ? "sticky slideInDown animated" : ""
