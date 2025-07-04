@@ -9,6 +9,15 @@ export default defineConfig({
     alias: {
       '@': path.resolve(__dirname, './src'),
     },
+    extensions: ['.js', '.jsx', '.json', '.ts', '.tsx'],
   },
-  extensions: ['.js', '.jsx', '.json', '.ts', '.tsx'],
+  build: {
+    rollupOptions: {
+      external: [
+        '@babel/runtime',
+        '@babel/runtime/helpers/esm/extends',
+        // Add any other babel runtime helpers that might cause issues
+      ],
+    }
+  }
 })
